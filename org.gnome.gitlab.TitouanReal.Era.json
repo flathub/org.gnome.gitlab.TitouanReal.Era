@@ -125,8 +125,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6284/download",
-                    "sha256": "64fe2068d694167a739810a0afe0e0a1442a30337ff3b42cb52201f5bc8391b3",
+                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6724/download",
+                    "sha256": "e42cbe642423c9040c123a1db23eb04adce9148e5657b41a96e216e9ba4608a5",
                     "dest-filename": "libclepsydre.tar.xz"
                 }
             ]
@@ -138,8 +138,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6285/download",
-                    "sha256": "213bb3a64aff685676ff380432cc0f46afc7f26f1700c18dda7ee52f8cb80a10",
+                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6725/download",
+                    "sha256": "da4d0444fdd42a6bcd9e25d45a1604f30d064a7242355d0ebf65e98a27d222a3",
                     "dest-filename": "libclepsydre-eds.tar.xz"
                 }
             ]
@@ -147,12 +147,12 @@
         {
             "name": "era",
             "buildsystem": "meson",
-            "config-opts": ["-Dcalendar-backend=flatpak-release-set", "-Dplatform=flatpak", "-Drelease-type=stable"],
+            "config-opts": ["-Dcalendar-backend=flathub-release-set", "-Dplatform=flatpak", "-Drelease-type=stable"],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/era/-/package_files/6289/download",
-                    "sha256": "4866d9f166768af446d87a7a8ae31d67a7ca49b684d0a631e2940ef2343a5d16",
+                    "url": "https://gitlab.gnome.org/TitouanReal/Era/-/package_files/6727/download",
+                    "sha256": "31824e6e0ca97364da3060596f75bcb48cda63d0649a980f81637c177e1b2407",
                     "dest-filename": "era.tar.xz"
                 }
             ]
