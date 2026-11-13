@@ -29,7 +29,8 @@
         "append-path": "/usr/lib/sdk/rust-stable/bin",
         "env": {
             "RUST_BACKTRACE": "1",
-            "RUST_LOG": "era=debug"
+            "RUST_LOG": "era=debug",
+            "GI_TYPELIB_PATH": "subprojects/clepsydre/clepsydre:subprojects/clepsydre-eds/libclepsydre-eds"
         }
     },
     "modules": [
@@ -78,13 +79,14 @@
                 "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
                 "-DBUILD_SHARED_LIBS=On",
                 "-DICAL_BUILD_DOCS=False",
-                "-DWITH_CXX_BINDINGS=False"
+                "-DLIBICAL_CXX_BINDINGS=False",
+                "-DLIBICAL_JAVA_BINDINGS=False"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz",
-                    "sha256": "e73de92f5a6ce84c1b00306446b290a2b08cdf0a80988eca0a2c9d5c3510b4c2"
+                    "url": "https://github.com/libical/libical/releases/download/v4.0.6/libical-4.0.6.tar.gz",
+                    "sha256": "2e3729cb69c282d3bb17a8d2b198af6e4bc7502fd3621c9adf573921fe9dceb0"
                 }
             ]
         },
@@ -114,33 +116,7 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/GNOME/evolution-data-server.git",
-                    "commit": "99edc087f1207979d951295f1a01f9b010e176ca"
-                }
-            ]
-        },
-        {
-            "name": "libclepsydre",
-            "buildsystem": "meson",
-            "config-opts": ["-Dlibclepsydre=true", "-Dintrospection=true"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6724/download",
-                    "sha256": "e42cbe642423c9040c123a1db23eb04adce9148e5657b41a96e216e9ba4608a5",
-                    "dest-filename": "libclepsydre.tar.xz"
-                }
-            ]
-        },
-        {
-            "name": "libclepsydre-eds",
-            "buildsystem": "meson",
-            "config-opts": ["-Dlibclepsydre-eds=true", "-Dintrospection=true"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/clepsydre/-/package_files/6725/download",
-                    "sha256": "da4d0444fdd42a6bcd9e25d45a1604f30d064a7242355d0ebf65e98a27d222a3",
-                    "dest-filename": "libclepsydre-eds.tar.xz"
+                    "commit": "757672184698ec9f46cc16cf8860ec312d1e9d36"
                 }
             ]
         },
@@ -151,8 +127,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.gnome.org/TitouanReal/Era/-/package_files/6727/download",
-                    "sha256": "31824e6e0ca97364da3060596f75bcb48cda63d0649a980f81637c177e1b2407",
+                    "url": "https://gitlab.gnome.org/TitouanReal/Era/-/package_files/7843/download",
+                    "sha256": "9003e40eac463855ec27e7033af952d837a1d02d6b7c1a6706555d3de9a4a51e",
                     "dest-filename": "era.tar.xz"
                 }
             ]
